@@ -19,7 +19,7 @@ pallet-contracts-rpc-runtime-api = { git = "https://github.com/paritytech/substr
 
 # Chain extension for `pallet-assets`
 pallet-assets = { git = "https://github.com/paritytech/substrate", package = "pallet-assets", default-features = false }
-pallet-assets-chain-extension = { git = "https://github.com/Supercolony-net/pallet-assets-chain-extension", default-features = false, features = ["substrate"]  }
+pallet-assets-chain-extension = { git = "https://github.com/727-Ventures/pallet-assets-chain-extension", default-features = false, features = ["substrate"]  }
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # Here imported with `substrate` feature
 
@@ -51,7 +51,7 @@ ink_lang = { version = "~3.3.0", default-features = false }
 ink_prelude = { version = "~3.3.0", default-features = false }
 ink_engine = { version = "~3.3.0", default-features = false, optional = true }
 
-pallet-assets-chain-extension = { git = "https://github.com/Supercolony-net/pallet-assets-chain-extension", default-features = false, features = ["ink"]  }
+pallet-assets-chain-extension = { git = "https://github.com/727-Ventures/pallet-assets-chain-extension", default-features = false, features = ["ink"]  }
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # Here imported with `ink` feature
 
