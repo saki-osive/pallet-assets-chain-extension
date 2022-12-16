@@ -23,7 +23,7 @@ use crate::traits::{
     Environment as AssetsEnvironment,
     PalletAssets,
 };
-use obce::ink::env::{
+use obce::ink_lang::env::{
     DefaultEnvironment,
     Environment,
 };
