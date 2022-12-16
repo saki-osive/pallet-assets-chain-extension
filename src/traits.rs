@@ -20,7 +20,7 @@
 // WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #[cfg(feature = "ink")]
-use obce::ink::ink_prelude::vec::Vec;
+use obce::ink::prelude::vec::Vec;
 #[cfg(feature = "substrate")]
 use obce::substrate::sp_std::vec::Vec;
 #[cfg(feature = "substrate")]
@@ -35,11 +35,7 @@ use pallet_assets::Error as AssetError;
 /// The origin of the call. The smart contract can execute methods on behalf of the `caller` or itself.
 #[derive(Debug, Copy, Clone, PartialEq, Eq, scale::Encode, scale::Decode)]
 #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]
-#[cfg_attr(
-    feature = "ink",
-    derive(ink_storage::traits::SpreadLayout, ink_storage::traits::PackedLayout,)
-)]
-#[cfg_attr(all(feature = "ink", feature = "std"), derive(ink_storage::traits::StorageLayout))]
+#[cfg_attr(all(feature = "ink", feature = "std"), derive(ink::storage::traits::StorageLayout))]
 pub enum Origin {
     Caller,
     Address,
@@ -47,13 +43,6 @@ pub enum Origin {
 
 impl Default for Origin {
     fn default() -> Self {
-        Self::Address
-    }
-}
-
-#[cfg(feature = "ink")]
-impl ink_storage::traits::SpreadAllocate for Origin {
-    fn allocate_spread(_ptr: &mut ink_primitives::KeyPtr) -> Self {
         Self::Address
     }
 }

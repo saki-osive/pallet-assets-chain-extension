@@ -23,15 +23,14 @@ use crate::traits::{
     Environment as AssetsEnvironment,
     PalletAssets,
 };
-use obce::ink::ink_env::{
+use obce::ink::env::{
     DefaultEnvironment,
     Environment,
 };
 
 #[derive(Default, Debug, Clone, Copy, PartialEq, Eq, scale::Encode, scale::Decode)]
 #[cfg_attr(feature = "std", derive(scale_info::TypeInfo))]
-#[derive(ink_storage::traits::SpreadLayout, ink_storage::traits::PackedLayout, ink_storage::traits::SpreadAllocate)]
-#[cfg_attr(feature = "std", derive(ink_storage::traits::StorageLayout))]
+#[cfg_attr(feature = "std", derive(ink::storage::traits::StorageLayout))]
 pub struct AssetsExtension;
 
 impl<T: Environment> AssetsEnvironment for T {
