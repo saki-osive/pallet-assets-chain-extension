@@ -8,13 +8,13 @@ version = "0.1.1"
 # Common deps
 scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
 scale-info = { version = "2", default-features = false, features = ["derive"] }
-obce = { git = "https://github.com/727-Ventures/obce", branch = "main", default-features = false }
+obce = { git = "https://github.com/727-Ventures/obce", branch = "feature/ink-master", default-features = false }
 
 # Substrate deps
 pallet-assets = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.34", default-features = false, optional = true }
 
 # Ink deps
-ink = { version = "4.0.0-beta", default-features = false, optional = true }
+ink = {  git = "https://github.com/paritytech/ink", commit = "4655a8b4413cb50cbc38d1b7c173ad426ab06cde", default-features = false, optional = true }
 
 [features]
 default = ["std"]
